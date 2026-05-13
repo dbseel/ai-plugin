@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "noibu": {
-      "type": "streamable-http",
+      "type": "sse",
       "url": "https://mcp.noibu.com"
     }
   }
