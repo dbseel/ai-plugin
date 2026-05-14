@@ -45,7 +45,7 @@ Both query tools require `orderBy` at the `input` level — see **Query Constrai
   explicit request to watch a session replay → load
   `references/journeys-and-replay.md`.
 - "Show / chart / visualize the conversion funnel", "checkout funnel chart",
-  "purchase journey chart" → load the `ecommerce-funnel-visualization` skill.
+  "purchase journey chart" → load `references/funnel-visualization.md`.
   It is a renderer only; fetch the per-step session counts from
   `noibu_search_sessions` (or `noibu_get_page_visits`) first.
 - Errors / bugs / crashes — only when the user EXPLICITLY asks. Load
@@ -62,7 +62,7 @@ Both query tools require `orderBy` at the `input` level — see **Query Constrai
 | "show the clickmap for /url" | `noibu_visualize_page_visits` (`visualization.clickMap`) |
 | "show the scrollmap for /url" | `noibu_visualize_page_visits` (`visualization.scrollMap`) |
 | "How many sessions reached cart / checkout / payment", "conversion-funnel step counts" | `noibu_search_sessions` |
-| "Show / chart / visualize the conversion funnel", "checkout funnel chart" | the `ecommerce-funnel-visualization` skill (renderer; expects step+sessions data already fetched) |
+| "Show / chart / visualize the conversion funnel", "checkout funnel chart" | load `references/funnel-visualization.md` (renderer; expects step+sessions data already fetched) |
 
 **No URL**: site-wide click prompts ("top CTAs", "what users click most") → `noibu_search_sessions`'s `CLICKED_TEXT`. Scroll has no site-wide equivalent — stay on `noibu_get_page_visits`. If scope is unclear, ask.
 
@@ -171,7 +171,7 @@ Load exactly one reference based on the topic of the user's question. Each file 
 |---|---|
 | Session-level analytics (conversion rate, revenue, AOV, traffic sources, bounce, search, products, time-series trends) | `references/sessions.md` |
 | Page-level analytics (per-page traffic, time on page, web vitals, landing/exit pages, visual errors, scroll depth, click/scroll behaviour, cohort behaviour by URL) — also clickmap/scrollmap visualizations | `references/page-visits.md` |
-| Rendering an ecommerce conversion funnel as a chart ("show the funnel", "checkout funnel chart") | the `ecommerce-funnel-visualization` skill (sibling skill, not a reference) |
+| Rendering an ecommerce conversion funnel as a chart ("show the funnel", "checkout funnel chart") | `references/funnel-visualization.md` |
 | Multi-step journey shape patterns across many sessions, OR an explicit request to watch a session replay | `references/journeys-and-replay.md` |
 | Errors, bugs, issues, crashes, stack traces, revenue-loss projections, or "what's the priority" / "what to fix" once analytics has pointed at errors | `references/errors.md` |
 | Connecting, disconnecting, listing, or checking the status of third-party integrations | `references/integrations.md` |
